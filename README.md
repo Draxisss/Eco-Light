@@ -7,7 +7,7 @@ La section [Installation](#installation) explique comment mettre l'Éco'Light en
 
 ## Présentation 
 
-Tout d'abord, l'Éco'Light est un interrupteur autonome et connecté. C'est à dire qu'il remplace un interrupteur classique en lieu et place et surtout dans sa fonction. Voici la [visualisation 3d](assets/3d/eco light.stl)
+Tout d'abord, l'Éco'Light est un interrupteur autonome et connecté. C'est à dire qu'il remplace un interrupteur classique en lieu et place et surtout dans sa fonction. Voici la [visualisation 3d](asset/3d/eco light.stl)
 
 ### Contraintes:
 
