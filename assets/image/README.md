@@ -1,1 +1,5 @@
-Les Photos présentées sont celles de mon prototype installé fonctionnel mais comme n'ayant pas d'imprimante 3d et vivant dans la France à Macron et bien je n'ai pas pu tout réimprimer en 3d. Par contre tout les fichiers sont bon et permettent la création d'un modèle vraiment fini sans les traces de colle ou autres désagréments.
+# Disclaimer
+
+---
+
+Les photos présentées sont celles de mon prototype installé fonctionnel mais comme n'ayant pas d'imprimante 3d et vivant dans la France à Macron et bien je n'ai pas pu tout réimprimer en 3d. Par contre tout les fichiers sont bon et permettent la création d'un modèle vraiment fini sans les traces de colle ou autres désagréments.
