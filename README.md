@@ -16,7 +16,7 @@ Tout d'abord, l'Éco'Light est un interrupteur autonome et connecté. C'est à d
 - Rendre le tout entièrement connecté et utilisable dans le monde **entier**
 - Etre compatible au maximum
 
-### Composants, [voir en détail](#detail-des-composants)
+### Composants, (voir en [détail](#detail-des-composants))
 
 - Le microcontrôleur : un ESP32
 - Un capteur à ultrasons : un HC-SR04
