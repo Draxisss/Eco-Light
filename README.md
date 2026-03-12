@@ -58,12 +58,14 @@ Et bien un site web permet un contrôle total sur le projet **mais pas seulement
 
 
 
-Cette présentation est **personnalisable bien sur** malgré le fait que ça aurait du être une application mais j'en reparlerai.
+Cette présentation est **personnalisable bien sur** malgré le fait que ça aurait du être une application mais j'en reparlerai...
 
 ---
 
 ## Installation 
 
+
+---
 ## Détail des composants
 
 | Composant                         | Quantité |  Prix (EUR) | Lien                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |   |
