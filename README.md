@@ -184,7 +184,6 @@ Si on représente tout schématiquement pour mieux comprendre la situation et é
 
 Il faut donc choisir son réseau wifi et indiquer le mot de passe pour que l'ESP32 ait accès à internet
 
-<img width="1383" height="1229" alt="image" src="https://github.com/user-attachments/assets/946bf85f-7728-4e50-a9ec-e87357b9a802" />
 
 Pour ensuite choisir la distance de détection du capteur à ultrasons (votre choix dépendra de l'emplacement de votre interrupteur, de la position de votre capteur mais surtout si vous voulez qu'il vous détecte quand vous passez vou ou votre main. Par exemple je l'ai réglé moi pour que, quand je circule, le capteur ne détecte rien mais quand je me rapproche ou passe ma main devant il allume la lumière. C'est plus agréable je trouve surtout si vous vivez à plus, qu'il y a des va et vient dans la pièce concernée car on  peut quand même allumer la lumière les bras chargés). 
 
@@ -193,9 +192,9 @@ Pour ensuite choisir la distance de détection du capteur à ultrasons (votre ch
 (Ps : moi comme référence je l'ai donc réglé à 13cm avec un interrupteur plutôt proche du cadre de porte)
 
 
-Vient ensuite la partie "API", créez un compte sur [Adafruit](https://io.adafruit.com) et rentrez vos informations (le nom d'utilisateur et la clé API peuvent être trouvés en cliquant sur l'icone de clé en haut à droite) :
+Vient ensuite la partie "API", créez un compte sur [Adafruit](https://io.adafruit.com) et rentrez vos informations (le nom d'utilisateur et la clé API peuvent être trouvés en cliquant sur l'icone de clé en haut à droite) et vous les rentrez ensuite ci-dessous :
 
-<img width="2160" height="1245" alt="image" src="https://github.com/user-attachments/assets/6e652bd1-ef96-45c9-a380-cdfb5422da59" />
+<img width="2808" height="1619" alt="image" src="https://github.com/user-attachments/assets/6e652bd1-ef96-45c9-a380-cdfb5422da59" />
 
 Il faudra ensuite respecter le tableau suivant lors de la création des feeds et du dashboard sur le site d'adafruit où vous irez ensuite après la mise en palce de l'Écolight (à vous de personaliser votre expérience).
 
