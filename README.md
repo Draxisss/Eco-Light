@@ -174,7 +174,7 @@ Si on représente tout schématiquement pour mieux comprendre la situation et é
 
  Page d'accueil donc, avant il faut appairer l'ESP32 avec votre téléphone (Paramètres → Connexions → Bluetooth → Sélectionner appareil (Éco'Light) → Appairer), après cette étape de complété et un temps de chargement plus ou moins long :
  
-<img width="541" height="1031" alt="image" src="https://github.com/user-attachments/assets/4c0207fe-4532-4985-85c6-78a841acc5b5" />
+<img width="406" height="773" alt="image" src="https://github.com/user-attachments/assets/4c0207fe-4532-4985-85c6-78a841acc5b5" />
 (Le bouton Reset sert si vous avez un problème durant le processus (freeze, erreur...), il redémarre l'ESP32 et vous renvoie à la page d'accueil)
 
 
@@ -232,7 +232,7 @@ Donc voilà quelque chose de beaucoup plus attrayant mais que je n'ai pu finalis
 
 # Conclusion
 
-Je me suis régalé pendant toute la conception, la création, la travail de recherche, la mise en forme ou encore le soirée passées à retourner dans tous les sens un problème que je n'arrivais pas à résoudre sur ce projet pour enfin aboutir. Je suis tellement heureux de pouvoir arriver le soir chez et de n'avoir plus, dans un coin de mla tête, une petite voix me disant me disant de toujours peaufiner un détail que personne ne verra... mais finalement en plus de l'aboutissement ça ne serait pas toute la quête qui compterait le plus non ?
+Je me suis régalé pendant toute la conception, la création, la travail de recherche, la mise en forme ou encore le soirée passées à retourner dans tous les sens un problème que je n'arrivais pas à résoudre sur ce projet pour enfin aboutir. Je suis tellement heureux de pouvoir arriver le soir chez et de n'avoir plus, dans un coin de mla tête, une petite voix me disant me disant de toujours peaufiner un détail que personne ne verra... Mais finalement en plus de l'aboutissement ça ne serait pas toutes les galères rencontrées qui compteraient le plus non ?
 
 J'ai bien sur quelques idées d'amélioration en tête et je serais ravi de vous les partager. En tout cas j'espere (si vous êtes arrivé jusque là) que ce projet vous à plu et j'espere surtout vous avoir convaincu !
 
