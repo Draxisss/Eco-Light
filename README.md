@@ -128,13 +128,12 @@ Pour ensuite choisir la distance de détection du capteur à ultrasons (votre ch
 
 (Ps : moi comme référence je l'ai donc réglé à 13cm avec un interrupteur plutôt proche du cadre de porte)
 
-<img width="2226" height="1229" alt="image" src="https://github.com/user-attachments/assets/92d9e2f4-530e-4c3f-bf9e-a1aa790ee042" />
 
 Vient ensuite la partie "API", créez un compte sur [Adafruit](https://io.adafruit.com) et rentrez vos informations (le nom d'utilisateur et la clé API peuvent être trouvés en cliquant sur l'icone de clé en haut à droite) :
 
 <img width="2160" height="1245" alt="image" src="https://github.com/user-attachments/assets/6e652bd1-ef96-45c9-a380-cdfb5422da59" />
 
-Il faudra ensuite respecter le tableau suivant lors de la création des feeds et du dashboard (à vous de personaliser votre expérience)
+Il faudra ensuite respecter le tableau suivant lors de la création des feeds et du dashboard sur le site d'adafruit où vous irez ensuite après la mise en palce de l'Écolight (à vous de personaliser votre expérience).
 
 | Fonction                        | Nom du feed  | Objet associé sur le dashboard             |
 |---------------------------------|--------------|--------------------------------------------|
@@ -148,9 +147,9 @@ Il faudra ensuite respecter le tableau suivant lors de la création des feeds et
 
 Pour rentrer l'heure pour le réveil dans le bloc texte le format attrendu est le suivant : XX:XX (Ex: 7:15, 12:25, 22:55)
 
-Si tout s'est bien passé alors cette page apparait et vous êtes prêt à utiliser l'Éco'Light pour la première fois !
-
 <img width="873" height="1211" alt="image" src="https://github.com/user-attachments/assets/fe43f993-40d4-485e-b076-43699543256a" />
+
+Si tout s'est bien passé alors cette page apparait et vous êtes prêt à utiliser l'Éco'Light pour la première fois !
 
 ---
 
