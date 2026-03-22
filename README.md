@@ -3,7 +3,7 @@
 ---
 
 Ceci est ma participation pour le concours innovez, vous trouverez dans ce repository tous les fichiers et explications nécessaires pour comprendre, mettre en place et même juger mon travail si vous faites parti du jury. Voici **l'Éco'Light**.  
-La section [Installation](#installation) explique comment mettre l'Éco'Light en place chez soi.
+La section [montage](#montage) explique comment **vous** pouvez mettre l'Éco'Light chez vous.
 
 ## Présentation 
 
@@ -117,7 +117,7 @@ Matériel nécessaire :
 Une fois toutes les pièces réunis, vous pouvez commencer à construire **votre** Éco'Light ! 
 
 
-Il vous faudra imprimer en 3d le fichier [suivant](assets/3d/eco-light.stl) **Attention** ne surtout pas imprimer les deux corps, c'est seulement pour choisir entre un interrupteur à gauche ou à droite. De même avec les "bras" pour le capteur à ultrasons, imprimez en un seul j'ai modélisé 3 tailles : 8, 10 et 12cm.
+Il vous faudra imprimer en 3d le fichier [suivant](assets/3d/eco-light.stl). **Attention** ne surtout pas imprimer les deux corps, c'est seulement pour choisir entre un interrupteur à gauche ou à droite. De même avec les "bras" pour le capteur à ultrasons, imprimez en un seul j'ai modélisé 3 tailles : 8, 10 et 12cm.
 
 Il faut ennsuite récupérer le [code](assets/code/code esp32.ino) pour l'ESP32 et le flasher sur votre microcontrolleur via Arduino IDE (un logiciel de programmation pour tout ces petits microcontrolleur)
 
