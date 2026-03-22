@@ -174,7 +174,7 @@ Si on représente tout schématiquement pour mieux comprendre la situation et é
 
  Page d'accueil donc, avant il faut appairer l'ESP32 avec votre téléphone (Paramètres → Connexions → Bluetooth → Sélectionner appareil (Éco'Light) → Appairer), après cette étape de complété et un temps de chargement plus ou moins long :
  
-<img width="406" height="773" alt="image" src="https://github.com/user-attachments/assets/4c0207fe-4532-4985-85c6-78a841acc5b5" />
+<img width="305" height="580" alt="image" src="https://github.com/user-attachments/assets/4c0207fe-4532-4985-85c6-78a841acc5b5" />
 (Le bouton Reset sert si vous avez un problème durant le processus (freeze, erreur...), il redémarre l'ESP32 et vous renvoie à la page d'accueil)
 
 
