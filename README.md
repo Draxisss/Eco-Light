@@ -39,7 +39,7 @@ En fonction de la luminosité de la pièce le module photorésistance bloque ou 
 
 <img width="743" height="830" alt="lum" src="https://github.com/user-attachments/assets/9999c47e-7e47-40ac-bb48-6136d6e0c6d9" />
 
-On régle ce capteur avec n'importe quel tournevis cruciforme au plat.
+On régle ce capteur avec n'importe quel tournevis cruciforme ou plat.
 
 
 Pour garder la main sur le système le bouton poussoir permet une commande "manuelle", c'est à dire d'allumer ou d'éteindre dans n'importe quelles conditons de luminosité
@@ -61,8 +61,104 @@ Et bien un site web permet un contrôle total sur le projet **mais pas seulement
 Cette présentation est **personnalisable bien sur** malgré le fait que ça aurait du être une application mais j'en reparlerai...
 
 ---
+## Montage
 
+| Nom                     | Pin | "Compément"                     |
+|-------------------------|-----|---------------------------------|
+| Trig                    | 19  | Vcc + Gnd (capteur à ultrasons) |
+| Echo                    | 18  | "        "                      |
+| Led jaune               | 33  | Gnd                             |
+| Led rouge               | 26  | Gnd                             |
+| Relai                   | 23  | Vcc + Gnd                       |
+| Photorésistance         | 27  | Vcc + Gnd                       |
+| Bouton poussoir         | 5   | Gnd                             |
+| Plus généralement : VCC | 5V  |                                 |
+| GND                     | Gnd |                                 |
+|                         |     |                                 |
+
+Pour les leds, pensez bien à rajouter une résistance en plus (150-220Ω), sinon vous risquez de la griller.
+
+
+---
 ## Installation 
+
+Très simplement vous allez le fixer à la place de l'interrupteur : l'Éco'Light respecte les dimensions standards, entraxe des vis de fixations de 60 mm (boite Ø67 mm).
+Il n'y a que le cablage qui change puisqu'il faut alimenter le microcontrolleur en électricité. Rassurez vous le travail à faire est minime : 
+
+<img width="2251" height="1388" alt="image" src="https://github.com/user-attachments/assets/b1d9b910-2669-4536-8e72-22a44d03b7a2" />
+
+On a donc ça du coté du boitier :
+
+<img width="1485" height="1530" alt="image" src="https://github.com/user-attachments/assets/c346b55f-e590-4655-8d19-e3fcbc88a3ad" />
+
+Si on représente tout schématiquement pour mieux comprendre la situation et éclaircir un petit peu les choses 
+
+<img width="2828" height="953" alt="image" src="https://github.com/user-attachments/assets/890b4bcf-326f-40d2-b619-fdd49d725e37" />
+
+ Aucune compétence en électricité n'est nécessaire même votre grand-mère pourrait le faire c'est dire ! (ps: je doute que beaucoup de grand-mères utilisent Github).
+ Bref plutôt qu'il ne faut pas du tout s'inquiéter sur ce point.
+
+ 
+ Ensuite vous vissez le tout (2 vis) et il n'y a plus qu'à allumer la machine via l'interrupteur latéral !
+
+ 
+ Pour ensuite, magie, vous connnecter à l'ESP32 avec votre téléphone pour finaliser la mise en place. Le but de cette application est d'informer le microcontrolleur de vos préférences (mdp wifi, distance détection...), il suffit de suivre ces étapes :
+
+ <img width="1657" height="1478" alt="image" src="https://github.com/user-attachments/assets/862b827e-1409-442d-a580-c53dcf6f791f" />
+
+ (à chaque fois il y aura la fenêtre d'erreur associée à l'étape correspondante)
+
+ Page d'accueil donc, avant il faut appairer l'ESP32 avec votre téléphone (Paramètres → Connexions → Bluetooth → Sélectionner appareil (Éco'Light) → Appairer), après cette étape de complété et un temps de chargement plus ou moins long :
+ 
+<img width="541" height="1031" alt="image" src="https://github.com/user-attachments/assets/4c0207fe-4532-4985-85c6-78a841acc5b5" />
+(Le bouton Reset sert si vous avez un problème durant le processus (freeze, erreur...), il redémarre l'ESP32 et vous renvoie à la page d'accueil)
+
+
+ Vous arrivez sur :
+
+ <img width="2159" height="1246" alt="image" src="https://github.com/user-attachments/assets/de1a1f6e-bfc3-435d-b1e1-4489f9e22163" />
+
+Il faut donc choisir son réseau wifi et indiquer le mot de passe pour que l'ESP32 ait accès à internet
+
+<img width="1383" height="1229" alt="image" src="https://github.com/user-attachments/assets/946bf85f-7728-4e50-a9ec-e87357b9a802" />
+
+Pour ensuite choisir la distance de détection du capteur à ultrasons (votre choix dépendra de l'emplacement de votre interrupteur, de la position de votre capteur mais surtout si vous voulez qu'il vous détecte quand vous passez vou ou votre main. Par exemple je l'ai réglé moi pour que, quand je circule, le capteur ne détecte rien mais quand je me rapproche ou passe ma main devant il allume la lumière. C'est plus agréable je trouve surtout si vous vivez à plus, qu'il y a des va et vient dans la pièce concernée car on  peut quand même allumer la lumière les bras chargés). 
+
+<img width="1383" height="1229" alt="image" src="https://github.com/user-attachments/assets/a3a22c9a-99ec-4529-913c-62465add9e92" />
+
+(Ps : moi comme référence je l'ai donc réglé à 13cm avec un interrupteur plutôt proche du cadre de porte)
+
+<img width="2226" height="1229" alt="image" src="https://github.com/user-attachments/assets/92d9e2f4-530e-4c3f-bf9e-a1aa790ee042" />
+
+Vient ensuite la partie "API", créez un compte sur [Adafruit](https://io.adafruit.com) et rentrez vos informations (le nom d'utilisateur et la clé API peuvent être trouvés en cliquant sur l'icone de clé en haut à droite) :
+
+<img width="2160" height="1245" alt="image" src="https://github.com/user-attachments/assets/6e652bd1-ef96-45c9-a380-cdfb5422da59" />
+
+Il faudra ensuite respecter le tableau suivant lors de la création des feeds et du dashboard (à vous de personaliser votre expérience)
+
+| Fonction                        | Nom du feed  | Objet associé sur le dashboard             |
+|---------------------------------|--------------|--------------------------------------------|
+| Gérer l'allumage                | lampe        | Toggle                                     |
+| Gérer le mode cambiolage        | cambriolage  | Toggle                                     |
+| Gérer le message d'alerte       | notif        | Text (Show icon avec exclamation-triangle) |
+| Gérer le mode réveil            | reveil       | Toggle                                     |
+| Gérer l'heure du réveil         | reveil heure | Text                                       |
+| Gérer le mode "soirée"          | soiree       | Toggle                                     |
+| Gérere les bpm du mode "soirée" | soiree bpm   | Text                                       |
+
+Pour rentrer l'heure pour le réveil dans le bloc texte le format attrendu est le suivant : XX:XX (Ex: 7:15, 12:25, 22:55)
+
+Si tout s'est bien passé alors cette page apparait et vous êtes prêt à utiliser l'Éco'Light pour la première fois !
+
+<img width="873" height="1211" alt="image" src="https://github.com/user-attachments/assets/fe43f993-40d4-485e-b076-43699543256a" />
+
+---
+
+Je voulais juste faire un point sur l'interace utilisateur, je trouve le dashboard adafruit très limitant et j'avais à la base créé une application beaucoup plus agréable que je veux quand même partager malgré le fait que l'API d'adafruit ne m'a pas permit de trouver une solution
+
+<img width="2561" height="1208" alt="image" src="https://github.com/user-attachments/assets/42f5c4f8-0a02-4c72-a8df-f74e77b99a14" />
+
+Donc voilà quelque chose de beaucoup plus attrayant mais que je n'ai pu finaliser malgré des heures de travail...
 
 
 ---
