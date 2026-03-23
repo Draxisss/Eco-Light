@@ -26,7 +26,10 @@ Tout d'abord, l'Éco'Light est un interrupteur autonome et connecté. C'est à d
 - Un bouton poussoir
 - Deux LED (rouge et jaune)
 
-<img width="470" height="678" alt="elec" src="https://github.com/user-attachments/assets/1f3d5177-7f69-4bd5-826b-81290b48d1e3" />
+
+
+<img width="2283" height="965" alt="image" src="https://github.com/user-attachments/assets/5756118a-0001-497b-b699-cb92c9ea88e2" />
+
 
 ---
 
@@ -141,7 +144,11 @@ Pour les leds, pensez bien à rajouter une résistance, sinon vous risquez de la
 
 Malheureusement n'ayant aucune connaissance en PCB je n'ai pas pu en faire une mais si ce projet marche je promet qu'elle sortira et alors on gagnera en taille de boitier et en facilité de montage.
 
-Une fois que vous êtes sur du bon fonctionnement du projet alors vous pouvez passer a la catégorie **installation** pour fixer et démarrer l'Éco'Light.
+Une fois que vous êtes sur du bon fonctionnement du projet alors vous pouvez passez au collage où le but va être de tout faire rentrer dans cette petite boîte. La mission peut être un peu technique mais devrait finir par ressembler à ça :
+
+<img width="470" height="678" alt="elec" src="https://github.com/user-attachments/assets/1f3d5177-7f69-4bd5-826b-81290b48d1e3" />
+
+À partir de là vous pouvez passer a la catégorie **installation** pour fixer et démarrer l'Éco'Light.
 
 ---
 ## Installation 
