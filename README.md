@@ -146,7 +146,7 @@ Une fois que vous êtes sur du bon fonctionnement du projet alors vous pouvez pa
 
 <img width="470" height="678" alt="elec" src="https://github.com/user-attachments/assets/1f3d5177-7f69-4bd5-826b-81290b48d1e3" />
 
-À partir de là vous pouvez passer a la catégorie **installation** pour fixer et démarrer l'Éco'Light.
+À partir de là vous pouvez passer à la catégorie **installation** pour fixer et démarrer l'Éco'Light.
 
 ---
 ## Installation 
