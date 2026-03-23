@@ -10,7 +10,7 @@ La section [montage](#montage) explique comment **vous** pouvez mettre l'Éco'Li
 
 Tout d'abord, l'Éco'Light est un interrupteur autonome et connecté. C'est à dire qu'il remplace un interrupteur classique en lieu et place et surtout dans sa fonction. Voici la [visualisation 3d](assets/3d/eco-light.stl) 
 
-img width="2283" height="965" alt="image" src="https://github.com/user-attachments/assets/5756118a-0001-497b-b699-cb92c9ea88e2" />
+<img width="2283" height="965" alt="image" src="https://github.com/user-attachments/assets/5756118a-0001-497b-b699-cb92c9ea88e2" />
 
 ### Contraintes:
 
