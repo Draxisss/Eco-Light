@@ -10,7 +10,8 @@ La section [montage](#montage) explique comment **vous** pouvez mettre l'Éco'Li
 
 Tout d'abord, l'Éco'Light est un interrupteur autonome et connecté. C'est à dire qu'il remplace un interrupteur classique en lieu et place et surtout dans sa fonction. Pour rapidement voir à quoi il ressemble, il y a la [visualisation 3d](assets/3d/eco-light.stl) 
 
-<img width="2283" height="965" alt="image" src="https://github.com/user-attachments/assets/5756118a-0001-497b-b699-cb92c9ea88e2" />
+<img width="1639" height="736" alt="image" src="https://github.com/user-attachments/assets/0fdb776b-821f-4e8b-afd9-7866708bebb3" />
+
 
 ### Contraintes:
 
@@ -28,6 +29,9 @@ Tout d'abord, l'Éco'Light est un interrupteur autonome et connecté. C'est à d
 - Un bouton poussoir
 - Deux LED (rouge et jaune)
 
+<p align="right">
+  <img width="769" height="565" alt="image" src="https://github.com/user-attachments/assets/630c32ba-c99f-405a-9dac-332f9c92067e" />
+</p>
 
 ---
 
@@ -51,7 +55,7 @@ Pour garder la main sur le système le bouton poussoir permet une commande "manu
 ### Connectivité 
 
 Faisant partie des contraintes générales qu'en est-il de ce paramètre ?
-Et bien un site web permet un contrôle total sur le projet **mais pas seulement** on peut aussi avoir accès à d'autre mode de fonctionnement :
+Et bien un site web permet de surveiller tous les paramètres mais aussi un contrôle total sur le projet **mais pas seulement** on peut aussi avoir accès à d'autre mode de fonctionnement :
 - Un mode réveil, qui allume le plafonnier à l'heure choisi
 - Un mode cambriolage, qui, si quelque chose passe devant le capteur à ultrasons, envoie une notification et fait clignoter la lumière rapidement
 - Un mode plus "fun" que j'ai nommé : mode soirée, qui allume/éteint la lampe au bpm sélectionné
@@ -61,6 +65,12 @@ Et bien un site web permet un contrôle total sur le projet **mais pas seulement
 
 
 Cette présentation est **personnalisable bien sûr** malgré le fait que ça aurait dû être une application mais j'en reparlerai...
+
+---
+
+### Wiring Diagram 
+
+<img width="1490" height="1100" alt="image" src="https://github.com/user-attachments/assets/1e379b79-7322-4989-b055-e740ff069586" />
 
 ---
 ## Composants
