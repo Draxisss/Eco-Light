@@ -12,7 +12,7 @@ Tout d'abord, l'Éco'Light est un interrupteur autonome et connecté. C'est à d
 
 <img width="1639" height="736" alt="image" src="https://github.com/user-attachments/assets/0fdb776b-821f-4e8b-afd9-7866708bebb3" />
 
-Lors de la conception d'Éco'Light, le point de départ était un constat simple : l'interrupteur classique fonctionne bien mais on peut faire **mieux** et quelques limites sont évidentes : le fait d'oublier la lumière allumée en plein jour, ne pas pouvoir allumer les mains prises, l'absence de contrôle à distance et aussi, depuis la crise du Covid-19 où la question de l'hygiène est devenue un sujet central, or l'interrupteur est l'un des objets les plus touchés des espaces partagés, il accumule et transfère donc les microbes. L'Éco'Light est ici une solution parfaite ! Je voulais concevoir l'interrupteur qui répond à tous ces critères mais aussi qui soit abordable, open-source et fiable, bref qui s'installe comme un interrupteur normal mais fait **bien plus**.
+Lors de la conception d'Éco'Light, le point de départ était un constat simple : l'interrupteur classique fonctionne bien mais on peut faire **mieux** et quelques limites sont évidentes : le fait d'oublier la lumière allumée en plein jour, ne pas pouvoir allumer les mains prises, l'absence de contrôle à distance et aussi, depuis la crise du Covid-19 où la question de l'hygiène est devenue un sujet central, or l'interrupteur est l'un des objets les plus touchés des espaces partagés, il accumule et transfère donc les microbes. L'Éco'Light est ici une solution parfaite ! Je voulais concevoir l'interrupteur qui réponde à tous ces critères mais aussi qui soit abordable, open-source et fiable, bref qui s'installe comme un interrupteur normal mais fait **bien plus**.
 
 ### Contraintes:
 
