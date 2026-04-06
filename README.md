@@ -201,7 +201,7 @@ Si on représente tout schématiquement pour mieux comprendre la situation et é
 Il faut donc choisir son réseau wifi et indiquer le mot de passe pour que l'ESP32 ait accès à internet
 
 
-Pour ensuite choisir la distance de détection du capteur à ultrasons (votre choix dépendra de l'emplacement de votre interrupteur, de la position de votre capteur mais surtout si vous voulez qu'il vous détecte quand vous passez vou ou votre main. Par exemple je l'ai réglé moi pour que, quand je circule, le capteur ne détecte rien mais quand je me rapproche ou passe ma main devant il allume la lumière. C'est plus agréable je trouve surtout si vous vivez à plus, qu'il y a des va et vient dans la pièce concernée car on  peut quand même allumer la lumière les bras chargés). 
+Pour ensuite choisir la distance de détection du capteur à ultrasons (votre choix dépendra de l'emplacement de votre interrupteur, de la position de votre capteur mais surtout si vous voulez qu'il vous détecte quand vous passez vous ou votre main. Par exemple je l'ai réglé moi pour que, quand je circule, le capteur ne détecte rien mais quand je me rapproche ou passe ma main devant il allume la lumière. C'est plus agréable je trouve surtout si vous vivez à plusieurs, qu'il y a des va et vient dans la pièce concernée car on  peut quand même allumer la lumière les bras chargés). 
 
 <img width="1383" height="1229" alt="image" src="https://github.com/user-attachments/assets/a3a22c9a-99ec-4529-913c-62465add9e92" />
 
@@ -224,7 +224,7 @@ Il faudra ensuite respecter le tableau suivant lors de la création des feeds et
 | Gérer le mode "soirée"          | soiree       | Toggle                                     |
 | Gérer les bpm du mode "soirée"  | soiree bpm   | Text                                       |
 
-Pour rentrer l'heure pour le réveil dans le bloc texte le format attrendu est le suivant : XX:XX (Ex: 7:15, 12:25, 22:55)
+Pour rentrer l'heure pour le réveil dans le bloc texte le format attendu est le suivant : XX:XX (Ex: 7:15, 12:25, 22:55)
 
 <img width="873" height="1211" alt="image" src="https://github.com/user-attachments/assets/fe43f993-40d4-485e-b076-43699543256a" />
 
