@@ -56,7 +56,7 @@ Pour garder la main sur le système le bouton poussoir permet une commande "manu
 ### Connectivité 
 
 Faisant partie des contraintes générales qu'en est-il de ce paramètre ?
-Et bien un site web permet de surveiller tous les paramètres mais aussi un contrôle total sur le projet **mais pas seulement** on peut aussi avoir accès à d'autre mode de fonctionnement :
+Et bien un site web permet de surveiller tous les paramètres mais aussi un contrôle total sur le projet **mais pas seulement** on peut aussi avoir accès à d'autres modes de fonctionnement :
 - Un mode réveil, qui allume le plafonnier à l'heure choisi
 - Un mode cambriolage, qui, si quelque chose passe devant le capteur à ultrasons, envoie une notification et fait clignoter la lumière rapidement
 - Un mode plus "fun" que j'ai nommé : mode soirée, qui allume/éteint la lampe au bpm sélectionné
@@ -95,10 +95,10 @@ Cette présentation est **personnalisable bien sûr** malgré le fait que ça au
 | Résistances                        | 2 (20)   | 0.99        | https://fr.aliexpress.com/item/1005006424279944.html |
 | Total                             |          | 35          | C'est seulement si vous achetez toutes les pièces, on peut faire de la récup sur certain composants  |
 
-Pour ma part j'ai réutilisé le convertisseur 220V AC vers 5V DC d'un chargeur, le bouton poussoir d'un petit appareil, les leds d'un jouet pour bébé, les résistances d'un autre projet et les fils d'un starter pack arduino.
+Pour ma part j'ai réutilisé le convertisseur 220V AC vers 5V DC d'un chargeur, le bouton poussoir d'un petit appareil (PS : un jouet pour enfant, peut-être un dinosaure électronique je ne me souviens plus très bien), les leds d'un jouet pour bébé, les résistances d'un autre projet et les fils d'un starter pack arduino.
 
 
-**PS :** Les quantités entre parenthèses sont les quantités minimum disponible pour ce produit. Vous pouvez très bien adapter du matériel que vous avez déjà j'ai simplement mis tout les éléments nécessaires a la conception de l'Éco'Light. Les liens proviennent tous d'aliexpress (plus simple pour l'électronique donc j'ai continué sur ma lancée) mais leur validité n'est pas certaine.
+**PS :** Les quantités entre parenthèses sont les quantités minimum disponible pour ce produit. Vous pouvez très bien adapter du matériel que vous avez déjà, j'ai simplement mis tout les éléments nécessaires a la conception de l'Éco'Light. Les liens proviennent tous d'aliexpress (plus simple pour l'électronique donc j'ai continué sur ma lancée) mais ils pourront malheureusement devenir invalides si je ne les verifie et actualise pas.
  
 ### Pour les retrouver vous même : 
 
@@ -186,9 +186,9 @@ Si on représente tout schématiquement pour mieux comprendre la situation et é
 
  <img width="1657" height="1478" alt="image" src="https://github.com/user-attachments/assets/862b827e-1409-442d-a580-c53dcf6f791f" />
 
- (à chaque fois il y aura la fenêtre d'erreur associée à l'étape correspondante)
+ (à chaque fois il y aura la fenêtre d'erreur associée à l'étape correspondante pour comprendre si vous avez un problème)
 
- Page d'accueil donc, avant il faut appairer l'ESP32 avec votre téléphone (Paramètres → Connexions → Bluetooth → Sélectionner appareil (Éco'Light) → Appairer), après cette étape de complété et un temps de chargement plus ou moins long :
+ Page d'accueil donc, avant il faut appairer l'ESP32 avec votre téléphone (Paramètres → Connexions → Bluetooth → Sélectionner appareil (Éco'Light) → Appairer), après cette étape de complétée et un temps de chargement plus ou moins long :
  
 <img width="183" height="348" alt="image" src="https://github.com/user-attachments/assets/4c0207fe-4532-4985-85c6-78a841acc5b5" />
 (Le bouton Reset sert si vous avez un problème durant le processus (freeze, erreur...), il redémarre l'ESP32 et vous renvoie à la page d'accueil)
@@ -201,7 +201,7 @@ Si on représente tout schématiquement pour mieux comprendre la situation et é
 Il faut donc choisir son réseau wifi et indiquer le mot de passe pour que l'ESP32 ait accès à internet
 
 
-Pour ensuite choisir la distance de détection du capteur à ultrasons (votre choix dépendra de l'emplacement de votre interrupteur, de la position de votre capteur mais surtout si vous voulez qu'il vous détecte quand vous passez vous ou votre main. Par exemple je l'ai réglé moi pour que, quand je circule, le capteur ne détecte rien mais quand je me rapproche ou passe ma main devant il allume la lumière. C'est plus agréable je trouve surtout si vous vivez à plusieurs, qu'il y a des va et vient dans la pièce concernée car on  peut quand même allumer la lumière les bras chargés). 
+Pour ensuite choisir la distance de détection du capteur à ultrasons (votre choix dépendra de l'emplacement de votre interrupteur, de la position de votre capteur mais surtout si vous voulez qu'il vous détecte quand vous passez vous ou votre main. Par exemple je l'ai réglé moi pour que, quand je circule, le capteur ne détecte rien mais quand je me rapproche ou passe ma main devant il allume la lumière (on peut donc rentrer et sortir sans changer l'état de la lumière). C'est plus agréable je trouve surtout si vous vivez à plusieurs, qu'il y a des va et vient dans la pièce concernée car on peut quand même allumer la lumière les bras chargés). 
 
 <img width="1383" height="1229" alt="image" src="https://github.com/user-attachments/assets/a3a22c9a-99ec-4529-913c-62465add9e92" />
 
@@ -224,12 +224,12 @@ Il faudra ensuite respecter le tableau suivant lors de la création des feeds et
 | Gérer le mode "soirée"          | soiree       | Toggle                                     |
 | Gérer les bpm du mode "soirée"  | soiree bpm   | Text                                       |
 
-Pour rentrer l'heure pour le réveil dans le bloc texte le format attendu est le suivant : XX:XX (Ex: 7:15, 12:25, 22:55)
+Pour rentrer l'heure pour le réveil dans le bloc texte le format attendu est le suivant : XX:XX (Ex: 7:15, 12:28, 22:55)
 
 <img width="873" height="1211" alt="image" src="https://github.com/user-attachments/assets/fe43f993-40d4-485e-b076-43699543256a" />
 
 Si tout s'est bien passé alors cette page apparait et vous êtes prêt à utiliser l'Éco'Light pour la première fois !
-Maintenant que vous êtes sûr du bon fonctionnement du projet vous pouvez alors coller le couvercle et profiter pleinement de votre Éco'Light à la maison.
+Maintenant que vous êtes sûr du bon fonctionnement du projet vous pouvez alors coller le couvercle à la colle chaude (un léger filet suffit) et profiter pleinement de votre Éco'Light à la maison.
 
 
 Si jamais un problème arrive ou vous voulez changer de taille de bras et aussi de distance de détection : relancez l'application et coupez et rallumez l'ESP32
@@ -247,7 +247,7 @@ Donc voilà quelque chose de beaucoup plus attrayant mais que je n'ai pu finalis
 
 # Conclusion
 
-Je me suis régalé pendant toute la conception, la création, le travail de recherche, la mise en forme ou encore les soirée passées à retourner dans tous les sens un problème que je n'arrivais pas à résoudre sur ce projet pour enfin aboutir. Je suis tellement heureux de pouvoir arriver le soir chez et de n'avoir plus, dans un coin de ma tête, une petite voix me disant de toujours peaufiner un détail que personne ne verra... Mais finalement en plus de l'aboutissement ça ne serait pas toutes les galères rencontrées qui compteraient le plus non ?
+Je me suis régalé pendant toute la conception, la création, le travail de recherche, la mise en forme ou encore les soirée passées à retourner dans tous les sens un problème que je n'arrivais pas à résoudre sur ce projet pour enfin aboutir. Je suis tellement heureux de pouvoir arriver le soir chez et de n'avoir plus, dans un coin de ma tête, une petite voix me disant de toujours peaufiner un détail que personne ne verra... Mais finalement en plus de l'aboutissement, ça ne serait pas ça qui compteraient le plus, toutes les galères rencontrées, non ?
 
 J'ai bien sur quelques idées d'amélioration en tête et je serais ravi de vous les partager. En tout cas j'espère (si vous êtes arrivé jusque là) que ce projet vous a plu et j'espère surtout vous avoir convaincu !
 
