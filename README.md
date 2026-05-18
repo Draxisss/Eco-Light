@@ -38,18 +38,18 @@ Lors de la conception de l'Éco'Light, le point de départ était un constat sim
 
 ## Fonctionnement
 
-Il suffit d'installer correctement l'Éco'Light à la place de l'interrupteur et via l'application dédiée et ensuite son fonctionnement est très simple : pour changer l'état du plafonnier il faut passer devant le capteur à ultrasons, la distance dépend de ce que l'utilisateur a choisi.
+Il suffit d'installer correctement l'Éco'Light à la place de l'interrupteur et via l'application dédiée et ensuite son fonctionnement est très simple : pour changer l'état du plafonnier il faut passer devant le capteur à ultrasons, la distance dépend de ce que l'utilisateur a choisi et la position est ajustable rapidement et à n'importe quel moment.
 
 <img width="541" height="705" alt="ultra" src="https://github.com/user-attachments/assets/aae689f7-9560-4988-8249-ddde4992ec51" />
 
-En fonction de la luminosité de la pièce le module photorésistance bloque ou non l'allumage ou éteint la lumière si elle était allumée lorsque la luminosité a augmenté. Si le module photorésistance est activé alors la LED rouge s'allume pour indiquer à l'utilisateur que le seuil qu'il a fixé est dépassé.
+En fonction de la luminosité de la pièce, le module photorésistance bloque ou non l'allumage, ou éteint la lumière si elle était allumée lorsque la luminosité a augmenté. Si le module photorésistance est activé alors la LED rouge s'allume pour indiquer à l'utilisateur que le seuil qu'il a fixé est dépassé et qu'il ne peut alors plus allumer la lumière.
 
 <img width="743" height="830" alt="lum" src="https://github.com/user-attachments/assets/9999c47e-7e47-40ac-bb48-6136d6e0c6d9" />
 
 On règle ce capteur avec n'importe quel tournevis cruciforme ou plat.
 
 
-Pour garder la main sur le système le bouton poussoir permet une commande "manuelle", c'est à dire d'allumer ou d'éteindre dans n'importe quelles conditons de luminosité
+Pour garder la main sur le système le bouton poussoir permet une commande "manuelle", c'est à dire d'allumer ou d'éteindre dans n'importe quelles conditons de luminosité.
 
 <img width="656" height="724" alt="comp" src="https://github.com/user-attachments/assets/e58b56f7-f2a1-4203-ab57-8f4cd83140d5" />
 
