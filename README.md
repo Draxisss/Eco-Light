@@ -236,7 +236,7 @@ Si jamais un problème arrive ou vous voulez changer de taille de bras et aussi 
 
 ---
 
-Je voulais juste faire un point sur l'interface utilisateur, je trouve le dashboard adafruit très limitant et j'avais à la base créé une application beaucoup plus agréable que je veux quand même partager malgré le fait que l'API d'adafruit ne m'a pas permis de trouver une solution
+Je voulais juste faire un point sur l'interface utilisateur, je trouve le dashboard adafruit très limitant (même moche, faut le dire un jour) et j'avais à la base créé une application beaucoup plus agréable que je veux quand même partager malgré le fait que l'API d'adafruit ne m'a pas permis de trouver une solution (impossible de s'abonner à un feed sur adafruit depuis l'application, pour celles ou ceux qui demenderaient).
 
 <img width="2561" height="1208" alt="image" src="https://github.com/user-attachments/assets/42f5c4f8-0a02-4c72-a8df-f74e77b99a14" />
 
@@ -250,6 +250,9 @@ Donc voilà quelque chose de beaucoup plus attrayant mais que je n'ai pu finalis
 Je me suis régalé pendant toute la conception, la création, le travail de recherche, la mise en forme ou encore les soirée passées à retourner dans tous les sens un problème que je n'arrivais pas à résoudre sur ce projet pour enfin aboutir. Je suis tellement heureux de pouvoir arriver le soir chez et de n'avoir plus, dans un coin de ma tête, une petite voix me disant de toujours peaufiner un détail que personne ne verra... Mais finalement en plus de l'aboutissement, ça ne serait pas ça qui compteraient le plus, toutes les galères rencontrées, non ?
 
 J'ai bien sur quelques idées d'amélioration en tête et je serais ravi de vous les partager. En tout cas j'espère (si vous êtes arrivé jusque là) que ce projet vous a plu et j'espère surtout vous avoir convaincu !
+
+PS : je n'ai jamais eu de retour extérieur à ce projet mis à part la famille et des amis proches et je pense que c'est toujours extrêmmement intéressant d'en recevoir. Sentez vous libre de partager vos avis et sentiments.
+cameosauvageon@mail.com
 
 Voici la video du projet : 
 
