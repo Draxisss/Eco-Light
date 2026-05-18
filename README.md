@@ -132,7 +132,7 @@ Une fois toutes les pièces réunies, vous pouvez commencer à construire **votr
 
 Il vous faudra imprimer en 3d le fichier [suivant](3d/eco-light.stl). **Attention** ne surtout pas imprimer les deux corps, c'est seulement pour choisir entre un interrupteur à gauche ou à droite. De même avec les "bras" pour le capteur à ultrasons, imprimez en un seul, j'ai modélisé 3 tailles : 8, 10 et 12cm.
 
-Il faut ensuite récupérer le [code](code/ecolight.apk) pour l'ESP32 et le flasher sur votre microcontrôleur via Arduino IDE (un logiciel de programmation pour tout ces petits microcontrôleur)
+Il faut ensuite récupérer le [code](code/code_esp32.ino) pour l'ESP32 et le flasher sur votre microcontrôleur via Arduino IDE (un logiciel de programmation pour tout ces petits microcontrôleur)
 
 Réalisez le montage ci-dessous soit directement dans le boîter fraichement imprimé si vous êtes confiant soit sur une breadboard pour être sûr : 
 
