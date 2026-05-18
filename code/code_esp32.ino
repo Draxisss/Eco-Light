@@ -8,30 +8,22 @@
 
 BluetoothSerial SerialBT;
 
-/************************* Adafruit.io Setup *********************************/
+/************************* adafruit io setup *********************************/
 
 #define AIO_SERVER "io.adafruit.com"
-
-// Using port 1883 for MQTT
 #define AIO_SERVERPORT 1883
 
-
-/************ Global State (you don't need to change this!) ******************/
-
-// WiFiFlientSecure for SSL/TLS support
 WiFiClient client;
 
-// Setup the MQTT client class by passing in the WiFi client and MQTT server and login details.
 char pseudo[50];
 char key[50];
 Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, pseudo, key);
 
-/****************************** Feeds ***************************************/
+/****************************** feeds  setup ***************************************/
 char path_lampe[60], path_cambriolage[60], path_soiree[60], path_bande_led[60], path_reveil_heure[60], path_soiree_bpm[60], path_notif[60], path_reveil[60];
 
-// 2. On lie les objets MQTT à ces buffers
-Adafruit_MQTT_Subscribe lampeSub = Adafruit_MQTT_Subscribe(&mqtt, path_lampe);
-Adafruit_MQTT_Publish lampePub = Adafruit_MQTT_Publish(&mqtt, path_lampe);
+Adafruit_MQTT_Subscribe lampeSub = Adafruit_MQTT_Subscribe(&mqtt, path_lampe); // cette ligne sert a s'abonner a un feed pour recevoir des donnees via mqtt
+Adafruit_MQTT_Publish lampePub = Adafruit_MQTT_Publish(&mqtt, path_lampe); // celle la pour envoyer et ecrire sur un feed
 
 Adafruit_MQTT_Subscribe cambriolageSub = Adafruit_MQTT_Subscribe(&mqtt, path_cambriolage);
 Adafruit_MQTT_Publish cambriolagePub = Adafruit_MQTT_Publish(&mqtt, path_cambriolage);
@@ -54,11 +46,11 @@ Adafruit_MQTT_Publish notifPub = Adafruit_MQTT_Publish(&mqtt, path_notif);
 Adafruit_MQTT_Subscribe reveilSub = Adafruit_MQTT_Subscribe(&mqtt, path_reveil);
 Adafruit_MQTT_Publish reveilPub = Adafruit_MQTT_Publish(&mqtt, path_reveil);
 
-/*************************** Sketch Code ************************************/
+/*************************** pins et variables utilisés dans le code ************************************/
 bool initialisation1 = false;
 bool initialisation2 = false;
 
-// set pin numbers and variable
+// tout les pins 
 Ultrasonic ultrasonic1(19, 18); // Trig = 19, Echo = 18
 int pin_led = 33;
 int pin_bouton = 5;
@@ -67,6 +59,7 @@ int pin_relay = 23;
 int pin_luminosity = 27;
 bool bouton_appuye_previous = false;
 
+//capteur ultrasons
 int distance_detection_ultrasonic = 30;
 bool etat_lumiere = false;
 bool etat_capteur_ultrason = false;
@@ -75,13 +68,14 @@ bool interBut = false;
 bool varLum = false;
 unsigned long lastMqttPing = 0;
 
+// variables qui servent a verifier le precedent message envoyé pour ne pas dépasser la limite par minute de adafruit
 const char* etat_lumiere_str_previous = "";
 const char* reveil_str_previous = "";
 const char* cambriolage_str_previous = "";
 const char* soiree_str_previous = "";
 const char* bande_led_str_previous = "";
 
-
+// cambriolage
 bool cambriolage = false;
 int delay_cambriolage = 500;
 unsigned long previous_delay = 0;
@@ -92,17 +86,14 @@ bool notif_state_previous = false;
 
 bool soiree = false;
 
-bool bande_led = false;
+bool bande_led = false; // toutes les appellations a bande led sont du parce que je voulais rajouter la possibilité de mettre une bande led en plus du plafonnier principal mais je n'ai pas reussi a flasher un nouveau firmware dans mes bande led donc c'est aussi une partie du projet inachevée
 
+// reveil
 bool reveil = false;
 bool reveilLum = false;
 int reveil_minute = 0;
 int reveil_heure = 0;
-const char* timezone = "CET-1CEST,M3.5.0/2,M10.5.0/3"; 
-// - CET = heure standard française (UTC+1)
-// - CEST = heure d'été française (UTC+2)
-// - M3.5.0/2 = passage heure d'été dernier dimanche de mars à 2h
-// - M10.5.0/3 = retour à l'heure d'hiver dernier dimanche d'octobre à 3h
+const char* timezone = "CET-1CEST,M3.5.0/2,M10.5.0/3"; // c'est ce qui gere les passage heure d'hiver/ heure d'ete
 const char* ntpServer = "fr.pool.ntp.org";
 
 int soiree_bpm = 100;
@@ -113,7 +104,7 @@ char notif[64] = "";
 
 bool delai = false;
 
-
+// les fonction callback sont la pour savoir quoi faire quand un nouveau message apparait sur le feed
 void lampeCallback(char* message, uint16_t len) {
   char messageBuffer[40];
   snprintf(messageBuffer, sizeof(messageBuffer), "lampe status is :: %s, len :: %u", message, len);
@@ -204,6 +195,7 @@ void reveilCallback(char* message, uint16_t len) {
 
 }
 
+// la fonction qui permet de publier surles feed sans depasser les limite de message par minute
 void indicatorPublish() {
 
   const char* etat_lumiere_str = etat_lumiere ? "ON" : "OFF";
@@ -238,21 +230,19 @@ void indicatorPublish() {
 
 }
 
-// Function to connect and reconnect as necessary to the MQTT server.
-// Should be called in the loop function and it will take care if connecting.
+
 void MQTT_connect() {
   int8_t ret;
-  // Stop if already connected.
   if (mqtt.connected()) {
     return;
   }
   Serial.print("Connecting to MQTT... ");
   uint8_t retries = 20;
-  while ((ret = mqtt.connect()) != 0) {  // connect will return 0 for connected
+  while ((ret = mqtt.connect()) != 0) {  
     Serial.println(mqtt.connectErrorString(ret));
     Serial.println("Retrying MQTT connection in 5 seconds...");
     mqtt.disconnect();
-    delay(2000);  // wait 2 seconds
+    delay(2000); 
     retries--;
     if (retries == 0) {
       SerialBT.print("XJ");
@@ -274,16 +264,13 @@ void setup() {
 
   Serial.println(F("Concours Innovez version finale"));
 
-  // Connect to WiFi access point.
+  // connecter au wifi
   SerialBT.begin("Eco'light");  // Nom visible en Bluetooth
   
   WiFi.mode(WIFI_STA);
   WiFi.disconnect();
   delay(100);
-  Serial.println(); 
-
-  // Set Adafruit IO's root CA
-  //client.setCACert(adafruitio_root_ca);
+  Serial.println();
 
   // Attacher les fonctions de callback
   lampeSub.setCallback(lampeCallback);
@@ -297,14 +284,12 @@ void setup() {
 
 }
 
-// uint32_t x=0;
-
-
+// boucle principale
 void loop() {
   if (SerialBT.hasClient()) {
     if (!initialisation1) {
       Serial.println("Scan start");
-      // WiFi.scanNetworks will return the number of networks found.
+      // WiFi.scanNetworks retourne le nombre de réseau trouvé.
       int n = WiFi.scanNetworks();
       Serial.println("Scan done");
       delay(1000);
@@ -312,14 +297,14 @@ void loop() {
         String ssid = WiFi.SSID(i);
         int len = ssid.length();
 
-        // Convertir la longueur en chaîne de 2 chiffres
+        // convertir la longueur en chaîne de 2 chiffres
         if (len < 10) {
-          SerialBT.print("0");  // Ajouter un 0 devant
+          SerialBT.print("0");  // ajouter un 0 devant
         }
-        SerialBT.print(len);     // Envoyer la longueur (ex : "05")
+        SerialBT.print(len);     // envoyer la longueur (ex : "05")
         Serial.println(len);
         delay(500);
-        SerialBT.print(ssid);    // Envoyer le SSID brut
+        SerialBT.print(ssid);    // puis le SSID brut
         Serial.println(ssid);
         delay(500);
         Serial.println(i);
@@ -336,17 +321,16 @@ void loop() {
       if (!initialisation2) {
 
         String ssid = SerialBT.readStringUntil('\n');
-        ssid.trim();  // Supprime les espaces ou retours à la ligne
-        // Vérifie si le premier caractère est '/'
+        ssid.trim();  // supprime les espaces ou retours à la ligne
+        // on vérifie si le premier caractère est '/'
         if (ssid.length() > 0 && ssid.charAt(0) == '/') {
-        ssid.remove(0, 1); // Supprime le premier caractère
+        ssid.remove(0, 1); // supprime le premier caractère
         }
 
         Serial.println();
         Serial.print("Connecting to ");
         Serial.println(ssid);
 
-        // Attendre que le mot de passe arrive
         while (!SerialBT.available()) {
           delay(10);
         }
@@ -356,7 +340,7 @@ void loop() {
         Serial.print("Password: ");
         Serial.println(password);
 
-        // Connexion WiFi
+        // connexion WiFi
         WiFi.begin(ssid.c_str(), password.c_str());
 
         int attempts = 0;
@@ -371,7 +355,7 @@ void loop() {
           Serial.println("WiFi connected");
           Serial.println("IP address: ");
           Serial.println(WiFi.localIP()); 
-          SerialBT.print("AB");  // Confirmer à App Inventor
+          SerialBT.print("AB");  // confirmer à App Inventor
           digitalWrite(pin_led2, HIGH);
           digitalWrite(pin_led, HIGH);
           delay(1000);
@@ -386,7 +370,7 @@ void loop() {
           delay(500);
         } else {
           Serial.println("\nÉchec de connexion WiFi.");
-          SerialBT.print("XI");
+          SerialBT.print("XI"); // envoyer l'erreur a App inventor
         }
 
         while (!SerialBT.available()) {
@@ -405,7 +389,7 @@ void loop() {
         snprintf(path_notif, sizeof(path_notif), "%s/feeds/notif", pseudo);
         snprintf(path_reveil, sizeof(path_reveil), "%s/feeds/reveil", pseudo);
 
-        // S'abonner à chaque feed
+        // s'abonner à chaque feed
         mqtt.subscribe(&lampeSub);
         mqtt.subscribe(&cambriolageSub);
         mqtt.subscribe(&soireeSub);
@@ -427,7 +411,7 @@ void loop() {
         if (mqtt.connected()) {
           Serial.println("Adafruit connecté");
           Serial.printf("Pseudo: %s | Key: %s\n", pseudo, key);
-          SerialBT.print("AC");  // Confirmer à App Inventor
+          SerialBT.print("AC");  // confirmer à App Inventor
           digitalWrite(pin_led2, HIGH);
           digitalWrite(pin_led, LOW);
           delay(1000);
@@ -445,7 +429,7 @@ void loop() {
           delay(500);
         } else {
           Serial.println("\nÉchec de connexion MQTT");
-          SerialBT.print("XJ");
+          SerialBT.print("XJ"); // envoyer l'echec sinon
         }       
 
         while (!SerialBT.available()) {
@@ -467,10 +451,6 @@ void loop() {
     }
   }
   if (initialisation2)  {
-    //delay(3000);
-    // Ensure the connection to the MQTT server is alive (this will make the first
-    // connection and automatically reconnect when disconnected).  See the MQTT_connect
-    // function definition further below.
     if (WiFi.status() == WL_CONNECTED) {
       MQTT_connect();
       mqtt.processPackets(50);
@@ -484,12 +464,8 @@ void loop() {
       lastMqttPing = millis();
       mqtt.ping();
     }
-
-    // wait a couple seconds to avoid rate limit
-    //delay(2000);
-
-
-    // put your main code here, to run repeatedly:
+    
+/****************************** debut du code pour gerer seulement l'interrupteur et non la connectivite ***************************************/
     delai = false;
     int mesure_ultrasons = ultrasonic1.Ranging(CM);
     bool bouton_appuye = digitalRead(pin_bouton) == LOW; 
