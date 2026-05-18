@@ -8,7 +8,7 @@ La section [montage](#montage) explique comment **vous** pouvez mettre l'Éco'Li
 
 ## Présentation 
 
-Tout d'abord, l'Éco'Light est un interrupteur autonome et connecté. C'est à dire qu'il remplace un interrupteur classique en lieu et place et surtout dans sa fonction. Pour rapidement voir à quoi il ressemble, il y a la [visualisation 3d](assets/3d/eco-light.stl) 
+Tout d'abord, l'Éco'Light est un interrupteur autonome et connecté. C'est à dire qu'il remplace un interrupteur classique en lieu et place et surtout dans sa fonction. Pour rapidement voir à quoi il ressemble, il y a la [visualisation 3d](3d/eco-light.stl) 
 
 <img width="1639" height="736" alt="image" src="https://github.com/user-attachments/assets/0fdb776b-821f-4e8b-afd9-7866708bebb3" />
 
@@ -130,9 +130,9 @@ Matériel nécessaire :
 Une fois toutes les pièces réunies, vous pouvez commencer à construire **votre** Éco'Light ! 
 
 
-Il vous faudra imprimer en 3d le fichier [suivant](assets/3d/eco-light.stl). **Attention** ne surtout pas imprimer les deux corps, c'est seulement pour choisir entre un interrupteur à gauche ou à droite. De même avec les "bras" pour le capteur à ultrasons, imprimez en un seul j'ai modélisé 3 tailles : 8, 10 et 12cm.
+Il vous faudra imprimer en 3d le fichier [suivant](3d/eco-light.stl). **Attention** ne surtout pas imprimer les deux corps, c'est seulement pour choisir entre un interrupteur à gauche ou à droite. De même avec les "bras" pour le capteur à ultrasons, imprimez en un seul, j'ai modélisé 3 tailles : 8, 10 et 12cm.
 
-Il faut ensuite récupérer le [code](assets/code/code_esp32.ino) pour l'ESP32 et le flasher sur votre microcontrôleur via Arduino IDE (un logiciel de programmation pour tout ces petits microcontrôleur)
+Il faut ensuite récupérer le [code](code/ecolight.apk) pour l'ESP32 et le flasher sur votre microcontrôleur via Arduino IDE (un logiciel de programmation pour tout ces petits microcontrôleur)
 
 Réalisez le montage ci-dessous soit directement dans le boîter fraichement imprimé si vous êtes confiant soit sur une breadboard pour être sûr : 
 
