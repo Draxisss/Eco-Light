@@ -254,12 +254,8 @@ J'ai bien sur quelques idées d'amélioration en tête et je serais ravi de vous
 PS : je n'ai jamais eu de retour extérieur à ce projet mis à part la famille et des amis proches et je pense que c'est toujours extrêmmement intéressant d'en recevoir. Sentez vous libre de partager vos avis et sentiments.
 cameosauvageon@mail.com
 
-Voici la video du projet : 
 
-
-
-
-
+[Présentation en vidéo du projet](https://youtu.be/p83ESVzQn0w)
 
 
 
